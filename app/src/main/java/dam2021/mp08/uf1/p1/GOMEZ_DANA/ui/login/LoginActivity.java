@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -22,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import dam2021.mp08.uf1.p1.GOMEZ_DANA.PatataActivity;
 import dam2021.mp08.uf1.p1.GOMEZ_DANA.R;
 import dam2021.mp08.uf1.p1.GOMEZ_DANA.ui.login.LoginViewModel;
 import dam2021.mp08.uf1.p1.GOMEZ_DANA.ui.login.LoginViewModelFactory;
@@ -57,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
 
         loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
             @Override
