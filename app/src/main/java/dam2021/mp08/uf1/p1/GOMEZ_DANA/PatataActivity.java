@@ -1,5 +1,6 @@
 package dam2021.mp08.uf1.p1.GOMEZ_DANA;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -23,11 +24,22 @@ public class PatataActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab2 = findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i = new Intent(PatataActivity.this, CercaPatatesFragment.class);
+                startActivity(i);
+
+            }
+        });
+
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(PatataActivity.this, AfegirPatataFragment.class);
+                startActivity(i);
             }
         });
     }

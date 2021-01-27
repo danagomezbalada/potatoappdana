@@ -3,26 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/LlistaPatatesFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/LlistaPatatesFragment"
         android:name="dam2021.mp08.uf1.p1.GOMEZ_DANA.LlistaPatatesFragment"
-        android:label="@string/first_fragment_label"
+        android:label="@string/llista_patates_fragment_label"
         tools:layout="@layout/fragment_llista_patates">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/CercaPatatesFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/CercaPatatesFragment"
         android:name="dam2021.mp08.uf1.p1.GOMEZ_DANA.CercaPatatesFragment"
-        android:label="@string/second_fragment_label"
+        android:label="@string/cerca_patates_fragment_label"
         tools:layout="@layout/fragment_cerca_patates">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/LlistaPatatesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AfegirPatataFragment"
+        android:name="dam2021.mp08.uf1.p1.GOMEZ_DANA.AfegirPatataFragment"
+        android:label="@string/afegir_patata_fragment_label"
+        tools:layout="@layout/fragment_afegir_patata">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/LlistaPatatesFragment" />
     </fragment>
 </navigation>
