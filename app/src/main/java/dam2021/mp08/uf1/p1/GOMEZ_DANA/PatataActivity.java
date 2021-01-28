@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class PatataActivity extends AppCompatActivity {
+public class PatataActivity extends AppCompatActivity implements LlistaPatatesFragment.OnListFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,4 +65,10 @@ public class PatataActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onListFragmentInteraction(Patata patata) {
+
+    }
+
 }
