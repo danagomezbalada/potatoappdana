@@ -5,6 +5,7 @@
     <string name="llista_patates_fragment_label">Llista Patates Fragment</string>
     <string name="cerca_patates_fragment_label">Cerca Patates Fragment</string>
     <string name="afegir_patata_fragment_label">Afegir Patates Fragment</string>
+    <string name="resultat_patata_fragment_label">Resultat Patata Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 

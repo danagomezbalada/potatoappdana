@@ -30,9 +30,12 @@
         android:name="dam2021.mp08.uf1.p1.GOMEZ_DANA.AfegirPatataFragment"
         android:label="@string/afegir_patata_fragment_label"
         tools:layout="@layout/fragment_afegir_patata">
+    </fragment>
+    <fragment
+        android:id="@+id/ResultatPatataFragment"
+        android:name="dam2021.mp08.uf1.p1.GOMEZ_DANA.ResultatPatataFragment"
+        android:label="@string/resultat_patata_fragment_label"
+        tools:layout="@layout/fragment_resultat_patata">
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/LlistaPatatesFragment" />
     </fragment>
 </navigation>
