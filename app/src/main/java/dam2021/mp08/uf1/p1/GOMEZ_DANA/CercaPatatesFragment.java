@@ -23,12 +23,12 @@ public class CercaPatatesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
+       /* view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(CercaPatatesFragment.this)
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);
             }
-        });
+        });*/
     }
 }

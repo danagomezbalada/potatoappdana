@@ -23,25 +23,7 @@ public class PatataActivity extends AppCompatActivity implements LlistaPatatesFr
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        FloatingActionButton fab2 = findViewById(R.id.fab);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(PatataActivity.this, CercaPatatesFragment.class);
-                startActivity(i);
-
-            }
-        });
-
-        fab2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(PatataActivity.this, AfegirPatataFragment.class);
-                startActivity(i);
-            }
-        });
     }
 
     @Override

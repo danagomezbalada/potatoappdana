@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +38,25 @@ public class LlistaPatatesFragment extends Fragment {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_llista_patates, container, false);
         View view = inflater.inflate(R.layout.fragment_llista_patates, container, false);
+
+        FloatingActionButton add = view.findViewById(R.id.add);
+        FloatingActionButton search = view.findViewById(R.id.search);
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(LlistaPatatesFragment.this)
+                        .navigate(R.id.action_LlistaPatates_to_AfegirPatata);
+            }
+        });
+
+       search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(LlistaPatatesFragment.this)
+                        .navigate(R.id.action_LlistaPatates_to_CercaPatates);
+            }
+        });
 
         // Set the adapter
         if (view.findViewById(R.id.llista_patates) instanceof RecyclerView) {
@@ -65,6 +86,7 @@ public class LlistaPatatesFragment extends Fragment {
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
+
     }
 
 
