@@ -27,6 +27,12 @@
         <action
             android:id="@+id/action_CercaPatates_to_LlistaPatates"
             app:destination="@id/LlistaPatatesFragment" />
+        <action
+            android:id="@+id/action_CercaPatates_to_AfegirPatata"
+            app:destination="@id/AfegirPatataFragment" />
+        <action
+            android:id="@+id/action_CercaPatates_to_ResultatPatata"
+            app:destination="@id/ResultatPatataFragment" />
     </fragment>
     <fragment
         android:id="@+id/AfegirPatataFragment"
@@ -36,12 +42,23 @@
         <action
             android:id="@+id/action_AfegirPatata_to_LlistaPatates"
             app:destination="@id/LlistaPatatesFragment" />
+        <action
+            android:id="@+id/action_AfegirPatata_to_CercaPatates"
+            app:destination="@id/CercaPatatesFragment" />
     </fragment>
     <fragment
         android:id="@+id/ResultatPatataFragment"
         android:name="dam2021.mp08.uf1.p1.GOMEZ_DANA.ResultatPatataFragment"
         android:label="@string/resultat_patata_fragment_label"
         tools:layout="@layout/fragment_resultat_patata">
-
+        <action
+            android:id="@+id/action_ResultatPatata_to_LlistaPatates"
+            app:destination="@id/LlistaPatatesFragment" />
+        <action
+            android:id="@+id/action_ResultatPatata_to_AfegirPatata"
+            app:destination="@id/AfegirPatataFragment" />
+        <action
+            android:id="@+id/action_ResultatPatata_to_CercaPatates"
+            app:destination="@id/CercaPatatesFragment" />
     </fragment>
 </navigation>
