@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -31,6 +32,7 @@ import dam2021.mp08.uf1.p1.GOMEZ_DANA.ui.login.LoginViewModelFactory;
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
+    private SQLiteDatabase baseDades;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,13 @@ public class LoginActivity extends AppCompatActivity {
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+
+        //BASE DE DADES
+        this.baseDades = this.openOrCreateDatabase("patata", MODE_PRIVATE, null);
+        String query = "CREATE TABLE IF NOT EXISTS patates (id TEXT PRIMARY KEY, " +
+                " tipus TEXT, descripcio TEXT, sembrar TEXT,  recollir TEXT) ";
+        this.baseDades.execSQL(query);
+
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override

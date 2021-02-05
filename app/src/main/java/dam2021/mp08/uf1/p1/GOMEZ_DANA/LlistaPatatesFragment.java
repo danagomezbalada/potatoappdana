@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -18,9 +21,12 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.content.Context.MODE_PRIVATE;
+
 public class LlistaPatatesFragment extends Fragment {
 
     private Bundle b;
+    private SQLiteDatabase baseDades;
 
     private static final String ARG_COLUMN_COUNT = "column-count";
     private int mColumnCount = 1;
@@ -82,7 +88,8 @@ public class LlistaPatatesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        afegirPatates();
+        carregarPatates();
+
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
@@ -107,11 +114,20 @@ public class LlistaPatatesFragment extends Fragment {
         mListener = null;
     }
 
-    private void afegirPatates() {
-        patates.add(new Patata("1","abc","eeef","123r","123f"));
-        patates.add(new Patata("2","abc","eeef","123r","123f"));
-        patates.add(new Patata("3","abc","eeef","123r","123f"));
-        patates.add(new Patata("4","abc","eeef","123r","123f"));
+    private void carregarPatates() {
+        this.baseDades = getActivity().openOrCreateDatabase("patata", MODE_PRIVATE, null);
+        String query = "SELECT * FROM patates";
+        Cursor resultat = this.baseDades.rawQuery(query, null);
+        if (resultat != null){
+            while (resultat.moveToNext()){
+                String id = resultat.getString(0);
+                String tipus = resultat.getString(1);
+                String descripcio = resultat.getString(2);
+                String sembrar = resultat.getString(3);
+                String recollir = resultat.getString(4);
+                patates.add(new Patata(id,tipus,descripcio,sembrar,recollir));
+            }
+        }
     }
 
 

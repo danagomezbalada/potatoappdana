@@ -2,6 +2,9 @@ package dam2021.mp08.uf1.p1.GOMEZ_DANA;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -16,12 +19,20 @@ import android.view.MenuItem;
 
 public class PatataActivity extends AppCompatActivity implements LlistaPatatesFragment.OnListFragmentInteractionListener{
 
+    private SQLiteDatabase baseDades;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        this.baseDades = this.openOrCreateDatabase("patata", MODE_PRIVATE, null);
+        String query = "SELECT * FROM patates";
+        Cursor resultat = this.baseDades.rawQuery(query, null);
+        resultat.moveToLast();
+        String tipus = resultat.getString(1);
 
 
     }
