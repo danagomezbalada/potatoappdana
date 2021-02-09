@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Pràctica 1 - La patata</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configuració</string>
     <!-- Strings used for fragments for navigation -->
     <string name="llista_patates_fragment_label">Llista Patates Fragment</string>
     <string name="cerca_patates_fragment_label">Cerca Patates Fragment</string>
@@ -17,12 +17,12 @@
     <string name="prompt_afegirRecollir">Data a recollir</string>
 
     <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >8 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="prompt_email">Correu</string>
+    <string name="prompt_password">Contrasenya</string>
+    <string name="action_sign_in">Entrar o registrar-se</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="welcome">Benvingut/da!</string>
+    <string name="invalid_username">Usuari incorrecte</string>
+    <string name="invalid_password">La contrasenya ha de tenir >8 caracters</string>
+    <string name="login_failed">Login fallit</string>
 </resources>

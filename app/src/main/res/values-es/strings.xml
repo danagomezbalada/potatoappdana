@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Practica 1 - La patata</string>
+    <string name="action_settings">Configuración</string>
+    <string name="llista_patates_fragment_label">Lista Patatas Fragmento</string>
+    <string name="cerca_patates_fragment_label">Busqueda Patatas Fragmento</string>
+    <string name="afegir_patata_fragment_label">Añadir Patatas Fragmento</string>
+    <string name="resultat_patata_fragment_label">Resultado Patatas Fragmento</string>
+    <string name="afegir">Añadir</string>
+    <string name="tornar">Ir a la lista</string>
+    <string name="cerca">Buscar</string>
+    <string name="prompt_cerca">ID a buscar</string>
+    <string name="prompt_afegirID">ID patata</string>
+    <string name="prompt_afegirTipus">Tipo de patata</string>
+    <string name="prompt_afegirDesc">Descripción de la patata</string>
+    <string name="prompt_afegirSembrar">Fecha a sembrar</string>
+    <string name="prompt_afegirRecollir">Fecha a recoger</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Correo</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Entrar o registrarse</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="welcome">Bienvenido/a!</string>
+    <string name="invalid_username">Usuario incorrecto</string>
+    <string name="invalid_password">La contraseña debe tener >8 caracteres</string>
+    <string name="login_failed">Login fallado</string>
+</resources>
