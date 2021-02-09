@@ -37,7 +37,11 @@ public class AfegirPatataFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_afegir_patata, container, false);
+        View view = inflater.inflate(R.layout.fragment_afegir_patata, container, false);
+
+        getActivity().setTitle(getString(R.string.afegir_patata_fragment_label));
+
+        return view;
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

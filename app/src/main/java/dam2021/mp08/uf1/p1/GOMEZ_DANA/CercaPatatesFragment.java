@@ -27,7 +27,11 @@ public class CercaPatatesFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cerca_patates, container, false);
+        View view = inflater.inflate(R.layout.fragment_cerca_patates, container, false);
+
+        getActivity().setTitle(getString(R.string.cerca_patates_fragment_label));
+
+        return view;
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

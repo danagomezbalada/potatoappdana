@@ -48,6 +48,8 @@ public class LlistaPatatesFragment extends Fragment {
         FloatingActionButton add = view.findViewById(R.id.add);
         FloatingActionButton search = view.findViewById(R.id.search);
 
+        getActivity().setTitle(getString(R.string.llista_patates_fragment_label));
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
