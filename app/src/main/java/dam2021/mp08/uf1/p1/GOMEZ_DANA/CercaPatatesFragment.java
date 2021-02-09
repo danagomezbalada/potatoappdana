@@ -30,6 +30,7 @@ public class CercaPatatesFragment extends Fragment {
         view.findViewById(R.id.botoCerca).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 NavHostFragment.findNavController(CercaPatatesFragment.this)
                         .navigate(R.id.action_CercaPatates_to_ResultatPatata);
             }
