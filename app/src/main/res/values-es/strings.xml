@@ -24,4 +24,7 @@
     <string name="invalid_username">Usuario incorrecto</string>
     <string name="invalid_password">La contraseña debe tener >8 caracteres</string>
     <string name="login_failed">Login fallado</string>
+    <string name="afegitCorrecte">Agregado correctamente.</string>
+    <string name="idRepetit">El ID no se puede repetir!</string>
+    <string name="campsBlanc">No se pueden dejar uno o mas campos en blanco</string>
 </resources>

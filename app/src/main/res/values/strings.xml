@@ -15,6 +15,10 @@
     <string name="prompt_afegirDesc">Descripcio de la patata</string>
     <string name="prompt_afegirSembrar">Data a sembrar</string>
     <string name="prompt_afegirRecollir">Data a recollir</string>
+    <string name="afegitCorrecte">Afegit correctament</string>
+    <string name="idRepetit">"L'ID no es pot repetir!"</string>
+    <string name="campsBlanc">No es poden deixar un o mes camps en blanc.</string>
+
 
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Correu</string>

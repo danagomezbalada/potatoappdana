@@ -75,15 +75,15 @@ public class AfegirPatataFragment extends Fragment {
                                 "VALUES ('"+id+"','"+tipus+"','"+desc+"','"+sembrar+"','"+recollir+"');";
                         try {
                             baseDades.execSQL(sqlQuery);
-                            Toast.makeText(getActivity().getApplicationContext(), "Afegit correctament", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity().getApplicationContext(), getString(R.string.afegitCorrecte), Toast.LENGTH_LONG).show();
                         } catch (SQLException e) {
                             Toast.makeText(getActivity().getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                         }
                     }else{
-                        Toast.makeText(getActivity().getApplicationContext(), "L'ID no es pot repetir!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity().getApplicationContext(), getString(R.string.idRepetit), Toast.LENGTH_LONG).show();
                     }
                 }else{
-                    Toast.makeText(getActivity().getApplicationContext(), "No es poden deixar un o mes camps en blanc.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity().getApplicationContext(), getString(R.string.campsBlanc), Toast.LENGTH_LONG).show();
                 }
             }
         });
