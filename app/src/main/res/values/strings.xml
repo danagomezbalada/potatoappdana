@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Pràctica 1 - La patata</string>
+    <string name="app_name">La patata</string>
     <string name="action_settings">Configuració</string>
+    <string name="welcome_msg">"Benvingut/da a l'aplicació de la patata."</string>
     <!-- Strings used for fragments for navigation -->
     <string name="llista_patates_fragment_label">Llista Patates Fragment</string>
     <string name="cerca_patates_fragment_label">Cerca Patates Fragment</string>

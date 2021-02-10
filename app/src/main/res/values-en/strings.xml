@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Project 1 - The potato</string>
+    <string name="app_name">The potatoe</string>
     <string name="action_settings">Settings</string>
     <string name="llista_patates_fragment_label">List Potatoes Fragment</string>
     <string name="cerca_patates_fragment_label">Search Potatoes Fragment</string>
@@ -27,4 +27,6 @@
     <string name="afegitCorrecte">Added correctly</string>
     <string name="idRepetit">ID already exists!</string>
     <string name="campsBlanc">Cannot leave one or more empty fields.</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="welcome_msg">Welcome to the potatoe app.</string>
 </resources>
