@@ -29,4 +29,5 @@
     <string name="campsBlanc">No se pueden dejar uno o mas campos en blanco</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="welcome_msg">Bienvenido/a a la aplicación de la patata.</string>
+    <string name="idNoTrobat">El ID no existe!</string>
 </resources>

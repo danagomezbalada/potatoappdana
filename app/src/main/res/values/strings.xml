@@ -19,6 +19,7 @@
     <string name="afegitCorrecte">Afegit correctament</string>
     <string name="idRepetit">"L'ID no es pot repetir!"</string>
     <string name="campsBlanc">No es poden deixar un o mes camps en blanc.</string>
+    <string name="idNoTrobat">"L'ID no existeix!"</string>
 
 
     <string name="title_activity_login">LoginActivity</string>

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -43,23 +44,29 @@ public class CercaPatatesFragment extends Fragment {
         view.findViewById(R.id.botoCerca).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                baseDades = getActivity().openOrCreateDatabase("patata", MODE_PRIVATE, null);
-                String query = "SELECT * FROM patates";
-                Cursor resultat = baseDades.rawQuery(query, null);
-                Boolean trobat = false;
-                String id = textId.getText().toString();
-                if (resultat != null){
-                    while (resultat.moveToNext() && !trobat){
-                        if (resultat.getString(0).equals(id)){
-                            trobat = true;
+                if (!textId.getText().toString().equals("")){
+                    baseDades = getActivity().openOrCreateDatabase("patata", MODE_PRIVATE, null);
+                    String query = "SELECT * FROM patates";
+                    Cursor resultat = baseDades.rawQuery(query, null);
+                    Boolean trobat = false;
+                    String id = textId.getText().toString();
+                    if (resultat != null){
+                        while (resultat.moveToNext() && !trobat){
+                            if (resultat.getString(0).equals(id)){
+                                trobat = true;
+                            }
                         }
                     }
-                }
-                if (trobat){
-                    dades = new Bundle();
-                    dades.putString("ID", id);
-                    NavHostFragment.findNavController(CercaPatatesFragment.this)
-                            .navigate(R.id.action_CercaPatates_to_ResultatPatata, dades);
+                    if (trobat){
+                        dades = new Bundle();
+                        dades.putString("ID", id);
+                        NavHostFragment.findNavController(CercaPatatesFragment.this)
+                                .navigate(R.id.action_CercaPatates_to_ResultatPatata, dades);
+                    }else{
+                        Toast.makeText(getActivity().getApplicationContext(), getString(R.string.idNoTrobat), Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(getActivity().getApplicationContext(), getString(R.string.campsBlanc), Toast.LENGTH_LONG).show();
                 }
             }
         });
