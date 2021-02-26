@@ -53,11 +53,12 @@ public class AfegirPatataFragment extends Fragment {
         EditText textDesc = view.findViewById(R.id.textboxDesc);
         EditText textSembrar = view.findViewById(R.id.textboxSembrar);
         EditText textRecollir = view.findViewById(R.id.textboxRecollir);
+        EditText textPreu = view.findViewById(R.id.textboxPreu);
 
         view.findViewById(R.id.botoAfegir).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!textId.getText().toString().equals("")&&!textTipus.getText().toString().equals("")&&!textDesc.getText().toString().equals("")&&!textSembrar.getText().toString().equals("")&&!textRecollir.getText().toString().equals("")){
+                if (!textId.getText().toString().equals("")&&!textTipus.getText().toString().equals("")&&!textDesc.getText().toString().equals("")&&!textSembrar.getText().toString().equals("")&&!textRecollir.getText().toString().equals("")&&!textPreu.getText().toString().equals("")){
                     baseDades = getActivity().openOrCreateDatabase("patata", MODE_PRIVATE, null);
                     String query = "SELECT * FROM patates";
                     Cursor resultat = baseDades.rawQuery(query, null);
@@ -67,6 +68,7 @@ public class AfegirPatataFragment extends Fragment {
                     String desc = textDesc.getText().toString();
                     String sembrar = textSembrar.getText().toString();
                     String recollir = textRecollir.getText().toString();
+                    String preu = textPreu.getText().toString();
                     if (resultat != null){
                         while (resultat.moveToNext()){
                             if (resultat.getString(0).equals(id)){
@@ -75,8 +77,8 @@ public class AfegirPatataFragment extends Fragment {
                         }
                     }
                     if (esPot){
-                        String sqlQuery = "INSERT INTO patates (id, tipus, descripcio, sembrar, recollir) " +
-                                "VALUES ('"+id+"','"+tipus+"','"+desc+"','"+sembrar+"','"+recollir+"');";
+                        String sqlQuery = "INSERT INTO patates (id, tipus, descripcio, sembrar, recollir, preu) " +
+                                "VALUES ('"+id+"','"+tipus+"','"+desc+"','"+sembrar+"','"+recollir+"','"+preu+"');";
                         try {
                             baseDades.execSQL(sqlQuery);
                             Toast.makeText(getActivity().getApplicationContext(), getString(R.string.afegitCorrecte), Toast.LENGTH_LONG).show();

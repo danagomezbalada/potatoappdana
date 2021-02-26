@@ -127,7 +127,8 @@ public class LlistaPatatesFragment extends Fragment {
                 String descripcio = resultat.getString(2);
                 String sembrar = resultat.getString(3);
                 String recollir = resultat.getString(4);
-                patates.add(new Patata(id,tipus,descripcio,sembrar,recollir));
+                String preu = resultat.getString(5);
+                patates.add(new Patata(id,tipus,descripcio,sembrar,recollir,preu));
             }
         }
     }

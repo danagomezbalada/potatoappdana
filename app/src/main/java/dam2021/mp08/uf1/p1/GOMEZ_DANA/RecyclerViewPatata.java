@@ -36,6 +36,7 @@ public class RecyclerViewPatata extends RecyclerView.Adapter<RecyclerViewPatata.
         holder.hTipusPatata.setText(llistaPatates.get(position).getTipus());
         holder.hSembrarPatata.setText(llistaPatates.get(position).getSembrar());
         holder.hRecollidaPatata.setText(llistaPatates.get(position).getRecollida());
+        holder.hPreuPatata.setText(llistaPatates.get(position).getPreu());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +61,7 @@ public class RecyclerViewPatata extends RecyclerView.Adapter<RecyclerViewPatata.
         public final TextView hTipusPatata;
         public final TextView hSembrarPatata;
         public final TextView hRecollidaPatata;
+        public final TextView hPreuPatata;
         public Patata patata;
 
         public ViewHolder(View view) {
@@ -69,6 +71,7 @@ public class RecyclerViewPatata extends RecyclerView.Adapter<RecyclerViewPatata.
             hTipusPatata = (TextView) view.findViewById(R.id.patata_tipus);
             hSembrarPatata = (TextView) view.findViewById(R.id.patata_sembrar);
             hRecollidaPatata = (TextView) view.findViewById(R.id.patata_recollida);
+            hPreuPatata = (TextView) view.findViewById(R.id.patata_preu);
         }
 
         @Override

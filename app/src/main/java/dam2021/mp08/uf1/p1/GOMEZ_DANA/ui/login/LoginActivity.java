@@ -49,7 +49,9 @@ public class LoginActivity extends AppCompatActivity {
         //BASE DE DADES
         this.baseDades = this.openOrCreateDatabase("patata", MODE_PRIVATE, null);
         String query = "CREATE TABLE IF NOT EXISTS patates (id TEXT PRIMARY KEY, " +
-                " tipus TEXT, descripcio TEXT, sembrar TEXT,  recollir TEXT) ";
+                " tipus TEXT, descripcio TEXT, sembrar TEXT,  recollir TEXT, preu TEXT, audio TEXT, imatge TEXT) ";
+        this.baseDades.execSQL(query);
+        query = "ALTER TABLE patates ADD preu TEXT";
         this.baseDades.execSQL(query);
 
 

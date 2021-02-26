@@ -6,13 +6,15 @@ public class Patata {
     private String descripcio;
     private String sembrar;
     private String recollida;
+    private String preu;
 
-    public Patata(String id, String tipus, String descripcio, String sembrar, String recollida){
+    public Patata(String id, String tipus, String descripcio, String sembrar, String recollida, String preu){
         this.id = id;
         this.tipus = tipus;
         this.descripcio = descripcio;
         this.sembrar = sembrar;
         this.recollida = recollida;
+        this.preu = preu;
 
     }
 
@@ -26,11 +28,14 @@ public class Patata {
     public void setSembrar(String sembrar){this.sembrar = sembrar;}
     public String getRecollida(){return this.recollida;}
     public void setRecollida(String recollida){this.recollida=recollida;}
+    public String getPreu(){return this.preu;}
+    public void setPreu(String preu){this.preu = preu;}
 
     @Override
     public String toString(){
         return "Patata-> ID: "+this.id +". Tipus: "+this.tipus+". Descripcio: "+this.descripcio+
-                ". Epoca de sembrar: "+this.sembrar +". Epoca de recollida: "+this.recollida;
+                ". Epoca de sembrar: "+this.sembrar +". Epoca de recollida: "+this.recollida+
+                ". Preu: "+this.preu;
     }
 
 }

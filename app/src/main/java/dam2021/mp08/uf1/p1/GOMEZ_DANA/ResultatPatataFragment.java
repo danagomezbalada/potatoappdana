@@ -53,6 +53,7 @@ public class ResultatPatataFragment extends Fragment {
         TextView desc = view.findViewById(R.id.desc);
         TextView semb = view.findViewById(R.id.semb);
         TextView reco = view.findViewById(R.id.reco);
+        TextView preu = view.findViewById(R.id.preu);
         String getId = "";
 
         if(dades != null) {
@@ -67,6 +68,7 @@ public class ResultatPatataFragment extends Fragment {
                 desc.setText(resultat.getString(2));
                 semb.setText(resultat.getString(3));
                 reco.setText(resultat.getString(4));
+                preu.setText(resultat.getString(5));
             }
         }
 

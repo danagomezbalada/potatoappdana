@@ -30,4 +30,5 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="welcome_msg">Welcome to the potatoe app.</string>
     <string name="idNoTrobat">ID doesn\'t exist!</string>
+    <string name="prompt_afegirPreu">Potato price</string>
 </resources>
