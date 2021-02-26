@@ -31,4 +31,7 @@
     <string name="welcome_msg">Bienvenido/a a la aplicación de la patata.</string>
     <string name="idNoTrobat">El ID no existe!</string>
     <string name="prompt_afegirPreu">Precio de la patata</string>
+    <string name="importarAudio">Importar Audio</string>
+    <string name="importarImatge">Importar Imagen</string>
+    <string name="importarXML">Importar XML</string>
 </resources>

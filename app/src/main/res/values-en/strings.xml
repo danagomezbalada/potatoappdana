@@ -31,4 +31,7 @@
     <string name="welcome_msg">Welcome to the potatoe app.</string>
     <string name="idNoTrobat">ID doesn\'t exist!</string>
     <string name="prompt_afegirPreu">Potato price</string>
+    <string name="importarAudio">Import Audio</string>
+    <string name="importarImatge">Import Image</string>
+    <string name="importarXML">Import XML</string>
 </resources>

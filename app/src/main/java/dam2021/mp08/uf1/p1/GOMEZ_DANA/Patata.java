@@ -7,6 +7,8 @@ public class Patata {
     private String sembrar;
     private String recollida;
     private String preu;
+    private String audio;
+    private String imatge;
 
     public Patata(String id, String tipus, String descripcio, String sembrar, String recollida, String preu){
         this.id = id;
@@ -15,6 +17,17 @@ public class Patata {
         this.sembrar = sembrar;
         this.recollida = recollida;
         this.preu = preu;
+
+    }
+    public Patata(String id, String tipus, String descripcio, String sembrar, String recollida, String preu, String audio, String imatge){
+        this.id = id;
+        this.tipus = tipus;
+        this.descripcio = descripcio;
+        this.sembrar = sembrar;
+        this.recollida = recollida;
+        this.preu = preu;
+        this.audio = audio;
+        this.imatge = imatge;
 
     }
 
@@ -30,6 +43,10 @@ public class Patata {
     public void setRecollida(String recollida){this.recollida=recollida;}
     public String getPreu(){return this.preu;}
     public void setPreu(String preu){this.preu = preu;}
+    public String getAudio(){return this.audio;}
+    public void setAudio(String audio){this.audio = audio;}
+    public String getImatge(){return this.imatge;}
+    public void setImatge(String imatge){this.imatge = imatge;}
 
     @Override
     public String toString(){

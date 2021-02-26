@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:hint="@string/prompt_afegirID"
         android:inputType="text"
@@ -86,12 +86,47 @@
         app:layout_constraintTop_toBottomOf="@+id/textboxRecollir"/>
 
     <Button
+        android:id="@+id/botoAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/importarAudio"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/textboxPreu"
+        app:layout_constraintEnd_toStartOf="@id/botoImatge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botoAfegir"/>
+
+    <Button
+        android:id="@+id/botoImatge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/importarImatge"
+        app:layout_constraintBottom_toTopOf="@id/botoAfegir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toEndOf="@id/botoAudio"
+        app:layout_constraintTop_toBottomOf="@id/textboxPreu"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
         android:id="@+id/botoAfegir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/afegir"
-        android:layout_marginTop="46dp"
-        app:layout_constraintTop_toBottomOf="@id/textboxPreu"
+        android:layout_marginTop="36dp"
+        app:layout_constraintTop_toBottomOf="@id/botoAudio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botoXML"/>
+
+    <Button
+        android:id="@+id/botoXML"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/importarXML"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/botoAfegir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/botoTornar"/>
@@ -101,10 +136,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tornar"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="26dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/botoAfegir" />
+        app:layout_constraintTop_toBottomOf="@id/botoXML" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/search"

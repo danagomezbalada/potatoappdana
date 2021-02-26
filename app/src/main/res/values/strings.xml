@@ -10,6 +10,9 @@
     <string name="afegir">Afegir</string>
     <string name="tornar">Anar a la llista</string>
     <string name="cerca">Cercar</string>
+    <string name="importarAudio">Importar Audio</string>
+    <string name="importarImatge">Importar Imatge</string>
+    <string name="importarXML">Importar XML</string>
     <string name="prompt_cerca">ID a cercar</string>
     <string name="prompt_afegirID">ID patata</string>
     <string name="prompt_afegirTipus">Tipus de patata</string>
