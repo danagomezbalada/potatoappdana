@@ -38,4 +38,5 @@
     <string name="stopAudio">Parar audio</string>
     <string name="audioNoTrobat">No hay ningún audio para esta patata!</string>
     <string name="audioReproduint">Ya se esta reproduciendo un audio!</string>
+    <string name="imatgeNoTrobada">No se ha encontrado la imagen de esta patata.</string>
 </resources>

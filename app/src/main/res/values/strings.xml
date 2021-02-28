@@ -28,6 +28,7 @@
     <string name="idNoTrobat">"L'ID no existeix!"</string>
     <string name="audioNoTrobat">No hi ha cap audio en aquesta patata!</string>
     <string name="audioReproduint">"Ja s'esta reproduint un audio!"</string>
+    <string name="imatgeNoTrobada">"No s'ha trobat la imatge d'aquesta patata."</string>
 
 
     <string name="title_activity_login">LoginActivity</string>

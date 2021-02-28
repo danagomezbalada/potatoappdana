@@ -2,6 +2,8 @@ package dam2021.mp08.uf1.p1.GOMEZ_DANA;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +15,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +33,7 @@ public class ResultatPatataFragment extends Fragment {
     private boolean trobat = false;
     private MediaPlayer so = null;
     private boolean isPlaying = false;
+    private ImageView image = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,6 +88,18 @@ public class ResultatPatataFragment extends Fragment {
             }
         }
 
+        if (trobat && imatge!=null && !imatge.equals("")){
+            try{
+                this.image = (ImageView) view.findViewById(R.id.imatge);
+                BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+                Bitmap bitmap = BitmapFactory.decodeFile(imatge,bmOptions);
+                bitmap = Bitmap.createScaledBitmap(bitmap,100,100,true);
+                this.image.setImageBitmap(bitmap);
+            }catch (NullPointerException e){
+                Toast.makeText(getActivity().getApplicationContext(), getString(R.string.imatgeNoTrobada), Toast.LENGTH_LONG).show();
+            }
+        }
+
         String finalAudio = audio;
         view.findViewById(R.id.botoPlay).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,9 +125,6 @@ public class ResultatPatataFragment extends Fragment {
                     }
 
                 }
-
-
-
             }
         });
 
