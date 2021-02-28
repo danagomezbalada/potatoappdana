@@ -91,8 +91,7 @@ public class ResultatPatataFragment extends Fragment {
         if (trobat && imatge!=null && !imatge.equals("")){
             try{
                 this.image = (ImageView) view.findViewById(R.id.imatge);
-                BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-                Bitmap bitmap = BitmapFactory.decodeFile(imatge,bmOptions);
+                Bitmap bitmap = BitmapFactory.decodeFile(imatge);
                 bitmap = Bitmap.createScaledBitmap(bitmap,100,100,true);
                 this.image.setImageBitmap(bitmap);
             }catch (NullPointerException e){

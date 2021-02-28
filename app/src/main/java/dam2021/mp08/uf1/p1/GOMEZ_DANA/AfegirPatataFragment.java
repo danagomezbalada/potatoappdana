@@ -151,32 +151,25 @@ public class AfegirPatataFragment extends Fragment {
         int indexColumna;
         switch (requestCode) {
             case 0:
-                seleccio = data.getData();
-                String[] columna = {MediaStore.Audio.Media.DATA};
-                cursor = getActivity().getContentResolver().query(seleccio, columna, null, null, null);
-                cursor.moveToFirst();
-                indexColumna = cursor.getColumnIndex(columna[0]);
-                rutaAudio = cursor.getString(indexColumna);
-                cursor.close();
+                if (data!=null){
+                    seleccio = data.getData();
+                    String[] columna = {MediaStore.Audio.Media.DATA};
+                    cursor = getActivity().getContentResolver().query(seleccio, columna, null, null, null);
+                    cursor.moveToFirst();
+                    indexColumna = cursor.getColumnIndex(columna[0]);
+                    rutaAudio = cursor.getString(indexColumna);
+                    cursor.close();
+                }
             case 1:
-                seleccio = data.getData();
-                String[] columna2 = {MediaStore.Images.Media.DATA};
-                cursor = getActivity().getContentResolver().query(seleccio, columna2, null, null, null);
-                cursor.moveToFirst();
-                indexColumna = cursor.getColumnIndex(columna2[0]);
-                rutaImatge = cursor.getString(indexColumna);
-                cursor.close();
-
-               // Bitmap imatge = BitmapFactory.decodeFile(rutaFitxer);
-            /* Reduïm la imatge per no tenir problemes de visualització
-            .
-            Calculem l’alçada per mantenir la proporció amb una
-            amplada de 1080 píxels
-            */
-               // int alt = (int) (imatge.getHeight() * 1080 / imatge.getWidth());
-               // Bitmap reduit = Bitmap.createScaledBitmap(imatge, 1080, alt, true);
-                // Afegim la imatge reduïda a l’Imageview
-                //this.imatge.setImageBitmap(reduit);
+                if (data!=null){
+                    seleccio = data.getData();
+                    String[] columna2 = {MediaStore.Images.Media.DATA};
+                    cursor = getActivity().getContentResolver().query(seleccio, columna2, null, null, null);
+                    cursor.moveToFirst();
+                    indexColumna = cursor.getColumnIndex(columna2[0]);
+                    rutaImatge = cursor.getString(indexColumna);
+                    cursor.close();
+                }
             default: break;
         }
     }
