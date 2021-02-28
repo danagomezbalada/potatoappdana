@@ -2,6 +2,8 @@ package dam2021.mp08.uf1.p1.GOMEZ_DANA;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
+import java.io.File;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -22,6 +27,9 @@ public class ResultatPatataFragment extends Fragment {
 
     private SQLiteDatabase baseDades;
     Bundle dades;
+    private boolean trobat = false;
+    private MediaPlayer so = null;
+    private boolean isPlaying = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,9 +62,8 @@ public class ResultatPatataFragment extends Fragment {
         TextView semb = view.findViewById(R.id.semb);
         TextView reco = view.findViewById(R.id.reco);
         TextView preu = view.findViewById(R.id.preu);
-        TextView audio = view.findViewById(R.id.audio);
-        TextView imatge = view.findViewById(R.id.imatge);
         String getId = "";
+        String audio="", imatge="";
 
         if(dades != null) {
             getId = dades.getString("ID");
@@ -71,11 +78,58 @@ public class ResultatPatataFragment extends Fragment {
                 semb.setText(resultat.getString(3));
                 reco.setText(resultat.getString(4));
                 preu.setText(resultat.getString(5));
-                audio.setText(resultat.getString(6));
-                imatge.setText(resultat.getString(7));
+                audio = resultat.getString(6);
+                imatge = resultat.getString(7);
+                trobat = true;
             }
         }
 
+        String finalAudio = audio;
+        view.findViewById(R.id.botoPlay).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (dades!=null){
+                    if (!isPlaying){
+                        if (trobat && finalAudio!=null && !finalAudio.equals("")){
+                            Uri path = Uri.fromFile(new File(finalAudio));
+                            so = MediaPlayer.create(getActivity(), path);
+                            try{
+                                so.start();
+                                Snackbar.make(view, "Play", Snackbar.LENGTH_SHORT)
+                                        .setAction("Action", null).show();
+                                isPlaying = true;
+                            }catch(NullPointerException e){
+                                Toast.makeText(getActivity().getApplicationContext(), getString(R.string.audioNoTrobat), Toast.LENGTH_LONG).show();
+                            }
+                        }else{
+                            Toast.makeText(getActivity().getApplicationContext(), getString(R.string.audioNoTrobat), Toast.LENGTH_LONG).show();
+                        }
+                    }else{
+                        Toast.makeText(getActivity().getApplicationContext(), getString(R.string.audioReproduint), Toast.LENGTH_LONG).show();
+                    }
+
+                }
+
+
+
+            }
+        });
+
+        view.findViewById(R.id.botoStop).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (dades!=null && so!=null && isPlaying){
+                    if (trobat && finalAudio!=null && !finalAudio.equals("")){
+                        Uri path = Uri.fromFile(new File(finalAudio));
+                        so.stop();
+                        so.release();
+                        Snackbar.make(view, "Stop", Snackbar.LENGTH_SHORT)
+                                .setAction("Action", null).show();
+                        isPlaying = false;
+                    }
+                }
+            }
+        });
 
         view.findViewById(R.id.botoTornar).setOnClickListener(new View.OnClickListener() {
             @Override

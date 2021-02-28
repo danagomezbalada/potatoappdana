@@ -15,6 +15,8 @@
     <string name="importarXML">Importar XML</string>
     <string name="prompt_cerca">ID a cercar</string>
     <string name="prompt_afegirID">ID patata</string>
+    <string name="playAudio">Reproduir audio</string>
+    <string name="stopAudio">Parar audio</string>
     <string name="prompt_afegirTipus">Tipus de patata</string>
     <string name="prompt_afegirDesc">Descripcio de la patata</string>
     <string name="prompt_afegirSembrar">Data a sembrar</string>
@@ -24,6 +26,8 @@
     <string name="idRepetit">"L'ID no es pot repetir!"</string>
     <string name="campsBlanc">No es poden deixar un o mes camps en blanc.</string>
     <string name="idNoTrobat">"L'ID no existeix!"</string>
+    <string name="audioNoTrobat">No hi ha cap audio en aquesta patata!</string>
+    <string name="audioReproduint">"Ja s'esta reproduint un audio!"</string>
 
 
     <string name="title_activity_login">LoginActivity</string>

@@ -13,9 +13,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"/>
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/tipus"
@@ -25,8 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/id"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintHorizontal_bias="0.3"/>
+        app:layout_constraintVertical_bias="0.05"/>
 
     <TextView
         android:id="@+id/desc"
@@ -36,8 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tipus"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintHorizontal_bias="0.3"/>
+        app:layout_constraintVertical_bias="0.05"/>
 
     <TextView
         android:id="@+id/semb"
@@ -47,8 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/desc"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintHorizontal_bias="0.3"/>
+        app:layout_constraintVertical_bias="0.05"/>
 
     <TextView
         android:id="@+id/reco"
@@ -58,8 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/semb"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintHorizontal_bias="0.3"/>
+        app:layout_constraintVertical_bias="0.05"/>
 
     <TextView
         android:id="@+id/preu"
@@ -69,30 +64,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reco"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintHorizontal_bias="0.3"/>
+        app:layout_constraintVertical_bias="0.05"/>
 
-    <TextView
-        android:id="@+id/audio"
+
+    <Button
+        android:id="@+id/botoPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/playAudio"
+        app:layout_constraintBottom_toTopOf="@id/botoTornar"
+        app:layout_constraintEnd_toStartOf="@id/botoStop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/preu"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintHorizontal_bias="0.3"/>
+        app:layout_constraintTop_toBottomOf="@id/preu"
+        app:layout_constraintVertical_bias="0.181" />
 
-    <TextView
-        android:id="@+id/imatge"
+    <Button
+        android:id="@+id/botoStop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/stopAudio"
+        app:layout_constraintBottom_toTopOf="@id/botoTornar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/audio"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintHorizontal_bias="0.3"/>
+        app:layout_constraintStart_toEndOf="@id/botoPlay"
+        app:layout_constraintTop_toBottomOf="@id/preu"
+        app:layout_constraintVertical_bias="0.181" />
 
     <Button
         android:id="@+id/botoTornar"
@@ -102,7 +97,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reco"/>
+        app:layout_constraintTop_toBottomOf="@+id/preu"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add"

@@ -34,4 +34,8 @@
     <string name="importarAudio">Import Audio</string>
     <string name="importarImatge">Import Image</string>
     <string name="importarXML">Import XML</string>
+    <string name="playAudio">Play audio</string>
+    <string name="stopAudio">Stop audio</string>
+    <string name="audioNoTrobat">There is no audio for this potato!</string>
+    <string name="audioReproduint">Audio is already playing!</string>
 </resources>
